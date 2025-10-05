@@ -1,0 +1,1333 @@
+/* Basic Reset and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #1c1c1c; /* Dark text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -------------------- */
+/* Header Styling */
+/* -------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo i {
+    color: #00aa6c; /* keep the Tripadvisor green for the owl icon */
+    font-size: 28px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;   /* makes it bold */
+    font-size: 26px;    /* adjust as you like */
+    color: #000000;     /* black color for Tripadvisor text */
+    letter-spacing: 0.5px;
+}
+
+
+
+.fa-tripadvisor {
+    font-size: 28px;
+}
+
+/* Center Navigation */
+.header-center a {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #1c1c1c;
+    padding-bottom: 3px;
+    transition: border-bottom 0.1s;
+}
+.header-center a:hover {
+    border-bottom: 2px solid #1c1c1c;
+}
+
+/* Right Side */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.currency {
+    font-size: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.sign-in-btn {
+    background-color: #1c1c1c; /* Dark/Black for contrast */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.sign-in-btn:hover {
+    background-color: #333333;
+}
+
+/* -------------------- */
+/* Main Content Styling */
+/* -------------------- */
+main {
+    text-align: center;
+    padding: 60px 10% 40px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1c1c1c;
+}
+
+/* Search Tabs */
+.search-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.tab {
+    background: none;
+    border: none;
+    color: #666666;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid transparent;
+}
+.tab.active {
+    color: #1c1c1c; /* Darker text for active tab */
+    border-bottom: 2px solid #1c1c1c;
+    font-weight: bold;
+}
+.tab i {
+    font-size: 16px;
+}
+
+/* Search Bar */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.search-input-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 30px 0 0 30px;
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+}
+.search-input-wrapper i {
+    color: #666666;
+    margin-right: 10px;
+}
+.search-input-wrapper input {
+    border: none;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+.search-btn {
+    background-color: #00a680; /* Tripadvisor Green */
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 0 30px 30px 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.search-btn:hover {
+    background-color: #008f73;
+}
+.content-block-placeholder {
+    position: relative;
+    width: 100%;
+    height: 400px; /* adjust height as you like */
+    overflow: hidden;
+}
+
+.content-block-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* makes it fit nicely */
+    display: block;
+}
+
+/* -------------------- */
+/* Placeholder Content */
+/* -------------------- */
+.content-block-placeholder {
+    height: 400px; /* Placeholder height for the large image/content */
+    background-color: #cccccc; /* Grey background for placeholder */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.ask-ollie-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.ask-ollie-fixed button {
+    background-color: #00aa6c; /* Tripadvisor green */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ask-ollie-fixed button:hover {
+    background-color: #008b56;
+    transform: scale(1.05);
+}
+
+/* Container for the entire section */
+.restaurant-categories {
+    padding: 40px 10%; /* Matches the padding of the header/main section */
+    background-color: #ffffff; /* Assuming white background */
+}
+
+/* Header Text Styling */
+.header-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a680; /* Tripadvisor Green */
+    margin: 0 0 5px 0;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0 0 25px 0;
+}
+
+/* Carousel Container (to hold cards and navigation) */
+.card-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden; /* Important for a cleaner look if cards extend beyond view */
+}
+
+/* Card List Styling (Flex container for the cards) */
+.card-list {
+    display: flex;
+    gap: 15px; /* Spacing between cards */
+}
+
+/* Individual Card Styling */
+.category-card {
+    position: relative;
+    width: 250px; /* Fixed width for each card */
+    min-width: 250px; /* Prevents shrinking on smaller screens */
+    height: 250px; /* Fixed height for a square/uniform look */
+    overflow: hidden;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card without distortion */
+    display: block;
+}
+
+/* Text Overlay Styling */
+.card-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    /* Gradient for better text readability over the image */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+/* Carousel Navigation Button Styling */
+.carousel-nav-btn {
+    position: absolute;
+    right: -20px; /* Position slightly off the edge */
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-nav-btn i {
+    color: #1c1c1c;
+    font-size: 16px;
+}
+
+/* General Section Styling (re-using/modifying previous structure) */
+.tour-experiences {
+    padding: 40px 10%; 
+    background-color: #ffffff;
+}
+
+.tour-experiences .header-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1c1c1c; /* Black text for this section's main title */
+    margin: 0 0 5px 0;
+}
+
+.tour-experiences .header-text p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0 0 25px 0;
+}
+
+/* Tour Card List Layout */
+.tour-card-list {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    overflow-x: hidden; /* To allow the card-carousel-container to manage the overflow */
+}
+
+/* Individual Tour Card Styling */
+.tour-card {
+    width: 25%; /* To fit 4 cards nicely on one row */
+    min-width: 260px; /* Minimum width to prevent cards from getting too small */
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.tour-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper */
+.card-image-wrapper {
+    position: relative;
+    height: 180px; /* Fixed height for consistent image size */
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Favorite/Heart Button */
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Award Badge (Yellow Circle) */
+.award-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffb800; /* Tripadvisor award yellow/gold */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Placeholder style - you'd replace this with a proper icon/image */
+    font-size: 10px; 
+    font-weight: bold;
+    color: #333;
+}
+.award-badge img {
+    /* If using a real image for the badge, adjust its size */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Card Details Text */
+.card-details {
+    padding: 15px 15px 20px 15px;
+}
+
+.location-label {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.tour-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+    /* Limit lines for clean look */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rating Info */
+.rating-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.rating-value {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.stars-placeholder {
+    color: #00a680; /* Tripadvisor Green for stars */
+    font-size: 12px;
+    margin-right: 5px;
+    /* This placeholder uses text characters. In a real site, this would be an SVG or font icon */
+}
+.review-count {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Price */
+.price {
+    font-size: 14px;
+    color: #1c1c1c;
+    margin: 0;
+}
+.price strong {
+    font-weight: bold;
+}
+
+/* Reusing the Carousel Nav Button style from previous section */
+.tour-experiences .carousel-nav-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    /* Adjust right position as the cards are narrower */
+    right: 5%; 
+}
+
+/* Ask Ollie Button */
+.ask-ollie-bottom {
+    display: flex;
+    justify-content: flex-end; /* Pushes the button to the far right */
+    margin-top: -30px; /* Pulls the button slightly up into the card area */
+    padding-right: 10%; /* Matches section padding */
+}
+.ask-ollie-bottom button {
+    /* Reusing the style from the first example */
+    background-color: #00a680;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1; /* Ensure it's above other elements */
+}
+/* --------------------------------- */
+/* 1. Promotional Banner Styling */
+/* --------------------------------- */
+
+.trips-banner-container {
+    padding: 0 10%; /* Matches section padding */
+    margin-bottom: 50px;
+}
+
+.trips-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a4fa86; /* Bright light green color */
+    border-radius: 8px;
+    padding: 20px 30px;
+    height: 150px; /* Fixed height for visual appeal */
+    overflow: hidden;
+}
+
+/* Left side: Phone Graphic */
+.banner-left {
+    position: relative;
+    height: 100%;
+    width: 150px; /* Space for the graphic */
+}
+.phone-graphic img {
+    position: absolute;
+    bottom: -15px; /* Pulls the graphic down slightly over the edge */
+    left: 0;
+    width: 150px;
+    height: auto;
+    /* Placeholder styles for the image to make it look like it pops out */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; 
+}
+
+
+/* Center Text */
+.banner-center {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+.banner-center h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 0 0 5px 0;
+}
+.banner-center p {
+    font-size: 16px;
+    color: #333333;
+    margin: 0;
+}
+
+/* Right side: Button */
+.banner-right {
+    flex-shrink: 0;
+}
+.get-started-btn {
+    background-color: white;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.get-started-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* --------------------------------- */
+/* 2. Inspiration Cards Styling */
+/* --------------------------------- */
+
+.inspiration-container {
+    padding: 20px 10% 60px;
+    position: relative; /* To position the Ask Ollie button */
+}
+
+.inspiration-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a680; /* Tripadvisor Green */
+    margin: 0 0 25px 0;
+}
+
+.inspiration-card-list {
+    display: flex;
+    gap: 20px;
+    /* This section looks like it can scroll, so we'll allow horizontal layout */
+    overflow-x: hidden; 
+}
+
+.inspiration-card {
+    width: calc(33.33% - 13.33px); /* Distribute three cards evenly, accounting for gap */
+    min-width: 300px; /* Ensures cards don't shrink too much */
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.inspiration-card .card-image-wrapper {
+    position: relative;
+    height: 200px; 
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inspiration-card .card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Reusing the favorite button style */
+.inspiration-card .favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1c1c1c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.card-caption {
+    font-size: 15px;
+    color: #1c1c1c;
+    line-height: 1.4;
+    padding: 0 5px 10px 5px; /* Slight horizontal padding for text */
+}
+
+/* Navigation Button and Ask Ollie Positioning */
+.carousel-bottom-controls {
+    position: relative;
+    margin-top: -100px; /* Pull up to overlay the Ask Ollie button on the last card */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Repositioning the next button (adjusting from previous sections) */
+.inspiration-container .carousel-nav-btn {
+    position: absolute;
+    top: 130px; 
+    right: 10%; 
+    transform: none; /* Reset transform */
+    z-index: 10;
+}
+
+/* Ask Ollie button specific to this section's layout */
+.ask-ollie-inspiration {
+    padding-right: 10px; /* A little space from the edge */
+}
+.ask-ollie-inspiration button {
+    /* Reusing the style from the first example */
+    background-color: #00a680;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 5; 
+    position: relative; /* Make sure it's above the footer/next section */
+}
+/* --------------------------------- */
+/* Awards Banner Section Styling */
+/* --------------------------------- */
+
+.awards-banner-section {
+    background-color: #004d40; /* Very dark green background */
+    color: white;
+    padding: 60px 10% 40px; /* Padding for the entire section */
+    position: relative;
+    overflow: hidden; /* Important for containing the absolute-positioned shapes */
+}
+
+.awards-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* To stack correctly above the shapes */
+    z-index: 2; /* Ensures content is above the abstract shapes */
+}
+
+/* Text Content (Left Side) */
+.text-content {
+    flex-basis: 45%;
+}
+
+.award-header {
+    margin-bottom: 20px;
+}
+
+/* Badge Styling (Small Yellow Circle with 2025) */
+.badge-2025 {
+    background-color: #ffb800; /* Yellow/Gold */
+    color: #1c1c1c;
+    font-weight: bold;
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.badge-2025 img {
+    /* If you use an image for the badge, set its size here */
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+}
+
+.text-content h1 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin: 20px 0 30px 0;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: white;
+    color: #1c1c1c;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Image Content (Right Side) */
+.image-content {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.image-content img {
+    width: 100%;
+    height: 400px; /* Example height for the image */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    
+    /* Key style for the custom curved/cutout shape */
+    /* This creates a rounded corner on the left bottom and a custom path */
+    /* A more complex path would require CSS clip-path, but we can simulate the curve with border-radius */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 80px; 
+    
+    /* Using a combination of clip-path and border-radius is ideal for the exact shape. */
+    /* For a simplified but visually similar effect: */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+/* --------------------------------- */
+/* Abstract Shape Styling (The circles) */
+/* --------------------------------- */
+
+/* Yellow Circle */
+.awards-banner-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 25%;
+    width: 120px;
+    height: 120px;
+    background-color: #ffee00; /* Bright yellow */
+    border-radius: 50%;
+    z-index: 1; 
+}
+
+/* Green Circle (on the bottom right) */
+.awards-banner-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    background-color: #00ff6a; /* Bright green */
+    border-radius: 50%;
+    z-index: 1; 
+}
+
+/* --------------------------------- */
+/* Ask Ollie Button Styling */
+/* --------------------------------- */
+.ask-ollie-banner {
+    position: absolute;
+    bottom: 20px;
+    right: 10%; 
+    z-index: 3; /* Ensure it is above the banner content and shapes */
+}
+.ask-ollie-banner button {
+    /* Reusing the general Ask Ollie style */
+    background-color: #00a680;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/* --------------------------------- */
+/* Themed Collections Section Styling */
+/* --------------------------------- */
+
+.themed-collections-section {
+    padding: 40px 10%; /* Matches previous sections' padding */
+    background-color: #ffffff;
+    position: relative;
+}
+
+.section-title-green {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a680; /* Tripadvisor Green */
+    margin: 0 0 25px 0;
+}
+
+/* Carousel Container (re-using general container class) */
+.collection-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Since the button is inside, we don't need to overflow this container, but we keep the structure consistent */
+}
+
+/* Card List Styling (Flex container for the cards) */
+.collection-card-list {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    width: 100%;
+}
+
+/* Individual Card Styling */
+.collection-card {
+    width: calc(25% - 15px); /* To fit 4 cards nicely on one row with 20px gaps */
+    min-width: 250px; /* Prevents shrinking too much */
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Wrapper */
+.collection-card .card-image-wrapper {
+    position: relative;
+    height: 250px; /* Consistent height for images */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image block */
+}
+
+.collection-card .card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block;
+}
+
+/* Title Overlay */
+.card-overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    /* Gradient for better text readability over the image */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+/* Description Text */
+.card-description {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+    line-height: 1.4;
+    padding: 0 5px; /* Slight padding for the text */
+    /* Limit to two lines for clean look */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Carousel Navigation Button Styling (Re-using generic class and adjusting position) */
+.themed-collections-section .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    right: 9%; /* Positioned slightly inside the main padding */
+    transform: translateY(-100%); /* Adjust to center vertically relative to the image wrapper */
+    /* Reuse previous button styles from the tour section */
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.themed-collections-section .carousel-nav-btn i {
+    color: #1c1c1c;
+    font-size: 16px;
+}
+/* --------------------------------- */
+/* Footer Styling */
+/* --------------------------------- */
+footer {
+    background-color: #f7f7f7; /* Very light gray background */
+    padding: 40px 10% 20px;
+    font-family: Arial, sans-serif;
+    color: #1c1c1c;
+}
+
+/* Main Link Columns Layout */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.footer-col {
+    flex-basis: 22%; /* Ensures four columns fit well */
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1c1c1c;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    font-size: 13px;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.site-link {
+    font-weight: bold;
+}
+
+/* Divider Line */
+.footer-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 10px 0 20px 0;
+}
+
+/* Bottom Section Layout (Copyright, Selectors, Social) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align to the top */
+}
+
+.footer-left {
+    flex-basis: 65%;
+}
+
+.footer-right {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align right side content to the right */
+}
+
+/* Copyright and Logo */
+.logo-footer {
+    font-size: 15px;
+    color: #1c1c1c;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.logo-footer .fa-tripadvisor {
+    color: #00a680; /* Tripadvisor Green */
+    font-size: 20px;
+    margin-right: 5px;
+}
+.logo-footer span {
+    font-weight: normal;
+}
+
+/* Legal Links */
+.legal-links a {
+    font-size: 13px;
+    color: #1c1c1c;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+/* Disclaimer Text */
+.disclaimer {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 20px;
+    line-height: 1.4;
+    max-width: 90%;
+}
+.read-more {
+    font-weight: bold;
+    color: #1c1c1c !important;
+    text-decoration: none !important;
+}
+
+/* Currency and Country Selectors */
+.selectors-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper select {
+    appearance: none; /* Remove default arrow */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 30px 8px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 120px; /* Fixed width for uniformity */
+}
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allows click-through to the select element */
+    font-size: 10px;
+    color: #555;
+}
+
+/* Social Media and Ollie Button Layout */
+.social-and-ollie {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a {
+    font-size: 18px;
+    color: #1c1c1c;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.social-icons a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Ask Ollie Button (Re-using the standard style) */
+.ask-ollie-footer button {
+    background-color: #00a680;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 🌍 RESPONSIVE DESIGN */
+
+/* ====== Large Screens (Desktops) ====== */
+@media (min-width: 1200px) {
+  .category-card, .tour-card, .inspiration-card, .collection-card {
+    width: 22%;
+  }
+}
+
+/* ====== Medium Screens (Tablets) ====== */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .header-center {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .search-bar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar-container input {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .card-list,
+  .tour-card-list,
+  .inspiration-card-list,
+  .collection-card-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .category-card,
+  .tour-card,
+  .inspiration-card,
+  .collection-card {
+    width: 45%;
+    margin: 10px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .footer-links-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-col {
+    width: 45%;
+  }
+}
+
+/* ====== Small Screens (Mobiles) ====== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .header-center a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  .search-section {
+    padding: 10px;
+  }
+
+  .search-bar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar-container input {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .card-list,
+  .tour-card-list,
+  .inspiration-card-list,
+  .collection-card-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card,
+  .tour-card,
+  .inspiration-card,
+  .collection-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .ask-ollie-fixed {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* ====== Ultra Small Devices ====== */
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .header-center a {
+    font-size: 14px;
+  }
+
+  .search-bar-container input {
+    font-size: 14px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+  }
+}
